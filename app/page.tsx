@@ -18,6 +18,7 @@ import { format } from "date-fns"
 import { ru } from "date-fns/locale";
 import { Calendar } from "@/components/ui/calendar"
 import { useRouter } from "next/navigation"
+import AnimatedSVG from "@/components/animated-svg";
 
 const userFormSchema = z.object({
   tab: z
@@ -103,7 +104,9 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-4 row-start-2 items-center sm:items-start">
-      <p className=" text-indigo-800">Service created by <a className="bg-zinc-500 hover:bg-indigo-700 text-zinc-50 p-0.5 rounded-md" href="https://github.com/MuratOfficial">@MuratOfficial</a> for testing fetches</p>
+        <div className="w-full justify-center flex flex-row"><AnimatedSVG/></div>
+        
+      <p className=" text-indigo-800">Service created by <a className="bg-zinc-500 hover:bg-indigo-700 text-zinc-50 p-0.5 rounded-md" target="_blank" href="https://github.com/MuratOfficial">@MuratOfficial</a> for testing fetches</p>
       
       <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className=" grid grid-cols-2 gap-4">
