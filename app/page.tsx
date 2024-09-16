@@ -23,7 +23,7 @@ import AnimatedSVG from "@/components/animated-svg";
 const userFormSchema = z.object({
   tab: z
   .string({required_error:"Заполните таб. номер"}),
-            staffId: z.number({required_error:"Заполните staffId"}),
+            staffId: z.coerce.number({required_error:"Заполните staffId"}),
             departmentId:z.number({required_error:"Заполните код департамента"}),
             positionCode : z
   .string({required_error:"Заполните positionCode"}),
